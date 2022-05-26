@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --aot --localize --configuration=development",
+    "build": "ng build --aot --localize --configuration=development && npx copyfiles -f .netlify/* dist/netlify-poc",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "i18n:en": "ng extract-i18n --format xliff --output-path ./src/locales --out-file messages.xlf",
@@ -32,6 +32,7 @@
     "@angular/localize": "^13.2.7",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "copyfiles": "^2.4.1",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
