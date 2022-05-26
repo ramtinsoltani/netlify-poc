@@ -58,12 +58,13 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
+              "outputHashing": "all",
+              "buildOptimizer": true,
+              "optimization": true,
+              "vendorChunk": false,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": false
             }
           },
           "defaultConfiguration": "production"
@@ -102,6 +103,15 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      },
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "nl": {
+            "translation": "src/locales/messages.nl.xlf",
+            "baseHref": "/nl/"
           }
         }
       }

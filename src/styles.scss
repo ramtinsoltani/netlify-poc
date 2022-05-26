@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.notice {
+  width: 100%;
+  text-align: center;
+  flex-grow: 1;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid transparent;
+
+  &.static {
+    border-color: #2087b8;
+    background-color: #2dbbff;
+  }
+
+  &.dynamic {
+    border-color: #d7a024;
+    background-color: #ffbe2d;
+    &:not(:last-child) { margin-bottom: 15px; }
+  }
+}
